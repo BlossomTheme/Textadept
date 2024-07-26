@@ -28,3 +28,18 @@ colors.orange = 0x0066CC
 colors.yellow = 0x009999
 colors.green = 0x009900
 colors.blue = 0xCC6600
+
+-- Default font.
+if not font then
+    font = WIN32 and 'Consolas' or OSX and 'Monaco' or
+      'Bitstream Vera Sans Mono'
+  end
+  if not size then size = OSX and 12 or 11 end
+  
+  -- Find/replace dialog
+  ui.find.entry_font = font .. ' ' .. (size - 1)
+  -- Predefined styles.
+  styles[view.STYLE_DEFAULT] = { font = font, size = size, fore = colors.fg1, back = colors.bg1}
+  styles[view.STYLE_LINENUMBER] = {fore = colors.fg6, back = colors.bg2}
+  styles[view.STYLE_BRACELIGHT] = {fore = colors.func,back=colors.bg2, bold = true}
+  styles[view.STYLE_BRACEBAD] = {fore=colors.warning,back=colors.bg3, bold=true}
