@@ -126,3 +126,18 @@ view.caret_line_layer = view.LAYER_UNDER_TEXT
 view:set_fold_margin_color(true, colors.bg2)
 view:set_fold_margin_hi_color(true, colors.bg2)
 
+-- Indicators.
+view.indic_fore[ui.find.INDIC_FIND] = colors.const
+view.indic_alpha[ui.find.INDIC_FIND] = 255
+view.indic_fore[textadept.editing.INDIC_HIGHLIGHT] = colors.fg4
+view.indic_alpha[textadept.editing.INDIC_HIGHLIGHT] = 64
+view.indic_fore[textadept.snippets.INDIC_PLACEHOLDER] = colors.fg1
+
+-- Call tips.
+view.call_tip_fore_hlt = colors.fg3
+
+-- Long Lines.
+view.edge_color = colors.bg3
+
+-- Find & replace pane entries.
+ui.find.entry_font = font .. ' ' .. (size - 1)
