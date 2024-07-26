@@ -43,3 +43,42 @@ if not font then
   styles[view.STYLE_LINENUMBER] = {fore = colors.fg6, back = colors.bg2}
   styles[view.STYLE_BRACELIGHT] = {fore = colors.func,back=colors.bg2, bold = true}
   styles[view.STYLE_BRACEBAD] = {fore=colors.warning,back=colors.bg3, bold=true}
+
+  -- styles[view.STYLE_CONTROLCHAR] = {}
+styles[view.STYLE_INDENTGUIDE] = {fore = colors.comment}
+styles[view.STYLE_CALLTIP] = {fore = colors.fg1, back = colors.bg2}
+styles[view.STYLE_FOLDDISPLAYTEXT] = {fore = colors.bg2}
+
+-- Tgag styles.
+-- styles[lexer.ANNOTATION] = {fore = colors.magenta}
+styles[lexer.ATTRIBUTE] = {fore = colors.fg3}
+styles[lexer.BOLD] = {bold = true}
+styles[lexer.CLASS] =  {fore = colors.func, bold = true}
+--styles[lexer.CODE] =  {}
+styles[lexer.COMMENT] =  {fore = colors.comment}
+styles[lexer.CONSTANT] =  {fore = colors.const}
+styles[lexer.CONSTANT_BUILTIN] =  {fore = colors.const, bold=true}
+styles[lexer.EMBEDDED] =  {fore = colors.builtin, back = colors.bg2}
+styles[lexer.ERROR] =  {fore = colors.warning, italics = true}
+styles[lexer.FUNCTION] = {fore = colors.func}
+styles[lexer.FUNCTION_BUILTIN] = {fore = colors.func, bold=true}
+-- styles[lexer.FUNCTION_METHOD] = {}
+styles[lexer.HEADING] =  {fore=colors.var}
+styles[lexer.IDENTIFIER] =  {fore=colors.var}
+styles[lexer.ITALIC] =  {italic=true}
+styles[lexer.KEYWORD] =  {fore = colors.keyword}
+styles[lexer.LABEL] =  {fore = colors.warning}
+-- styles[lexer.LINK] =  {}
+-- styles[lexer.LIST] =  {}
+styles[lexer.NUMBER] =  {fore = colors.const}
+styles[lexer.OPERATOR] =  {fore = colors.fg2}
+styles[lexer.PREPROCESSOR] =  {fore = colors.str}
+styles[lexer.REFERENCE] =  {fore = colors.var}
+styles[lexer.REGEX] =  {fore = colors.str}
+styles[lexer.STRING] =  {fore = colors.str}
+styles[lexer.TAG] =  {fore = colors.fg3}
+styles[lexer.TYPE] =  {fore = colors.func}
+-- styles[lexer.UNDERLINE] =  {fore = colors.warning}
+styles[lexer.VARIABLE] =  {fore = colors.warning}
+styles[lexer.VARIABLE_BUILTIN] =  {fore = colors.warning, bold=true}
+-- styles[lexer.WHITESPACE] =  {}
