@@ -33,4 +33,4 @@ events.connect(events.LEXER_LOADED, function(name)
 end)
 ```
 5. Restart or reset Textadept
-6. Enjoy
+6. Enjoy the new theme!
