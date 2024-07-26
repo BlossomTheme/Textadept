@@ -1,3 +1,4 @@
+
 local view, colors, styles = view, view.colors, view.styles
 
 colors.fg1       = 0x8d05ff
@@ -31,20 +32,19 @@ colors.blue = 0xCC6600
 
 -- Default font.
 if not font then
-    font = WIN32 and 'Consolas' or OSX and 'Monaco' or
-      'Bitstream Vera Sans Mono'
-  end
-  if not size then size = OSX and 12 or 11 end
-  
-  -- Find/replace dialog
-  ui.find.entry_font = font .. ' ' .. (size - 1)
-  -- Predefined styles.
-  styles[view.STYLE_DEFAULT] = { font = font, size = size, fore = colors.fg1, back = colors.bg1}
-  styles[view.STYLE_LINENUMBER] = {fore = colors.fg6, back = colors.bg2}
-  styles[view.STYLE_BRACELIGHT] = {fore = colors.func,back=colors.bg2, bold = true}
-  styles[view.STYLE_BRACEBAD] = {fore=colors.warning,back=colors.bg3, bold=true}
+  font = WIN32 and 'Consolas' or OSX and 'Monaco' or
+    'Bitstream Vera Sans Mono'
+end
+if not size then size = OSX and 12 or 11 end
 
-  -- styles[view.STYLE_CONTROLCHAR] = {}
+-- Find/replace dialog
+ui.find.entry_font = font .. ' ' .. (size - 1)
+-- Predefined styles.
+styles[view.STYLE_DEFAULT] = { font = font, size = size, fore = colors.fg1, back = colors.bg1}
+styles[view.STYLE_LINENUMBER] = {fore = colors.fg6, back = colors.bg2}
+styles[view.STYLE_BRACELIGHT] = {fore = colors.func,back=colors.bg2, bold = true}
+styles[view.STYLE_BRACEBAD] = {fore=colors.warning,back=colors.bg3, bold=true}
+-- styles[view.STYLE_CONTROLCHAR] = {}
 styles[view.STYLE_INDENTGUIDE] = {fore = colors.comment}
 styles[view.STYLE_CALLTIP] = {fore = colors.fg1, back = colors.bg2}
 styles[view.STYLE_FOLDDISPLAYTEXT] = {fore = colors.bg2}
@@ -125,6 +125,19 @@ view.caret_line_layer = view.LAYER_UNDER_TEXT
 -- Fold Margin.
 view:set_fold_margin_color(true, colors.bg2)
 view:set_fold_margin_hi_color(true, colors.bg2)
+
+-- Markers.
+--view.marker_fore[textadept.bookmarks.MARK_BOOKMARK] = colors.bg1
+view.marker_back[textadept.bookmarks.MARK_BOOKMARK] = colors.str
+--view.marker_fore[textadept.run.MARK_WARNING] = colors.bg1
+view.marker_back[textadept.run.MARK_WARNING] = colors.warning2
+--view.marker_fore[textadept.run.MARK_ERROR] = colors.bg1
+view.marker_back[textadept.run.MARK_ERROR] = colors.warning
+for i = view.MARKNUM_FOLDEREND, view.MARKNUM_FOLDEROPEN do -- fold margin
+  view.marker_fore[i] = colors.bg1
+  view.marker_back[i] = colors.comment
+  view.marker_back_selected[i] = colors.bg3
+end
 
 -- Indicators.
 view.indic_fore[ui.find.INDIC_FIND] = colors.const

@@ -1,7 +1,8 @@
-# Blossom Theme for [App/Service/etc... Name]
+# Blossom Theme for Textadept
 
 ## Preview
-> Add Screenshots of the theme
+![](./screenshot01.png)
+![](./screenshot02.png)
 
 ## Installation
-> Add the method to install the theme.
+
