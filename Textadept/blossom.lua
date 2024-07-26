@@ -25,3 +25,16 @@ if not font then
     'Bitstream Vera Sans Mono'
 end
 if not size then size = OSX and 12 or 11 end
+
+-- Find/replace dialog
+ui.find.entry_font = font .. ' ' .. (size - 1)
+
+-- Predefined styles.
+styles.default = {
+  font = font, size = size, fore = colors.fg1, back = colors.bg1
+}
+styles.line_number = {fore = colors.fg1, back = colors.bg2}
+--styles.control_char =
+styles.indent_guide = {fore = colors.comment}
+styles.call_tip = {fore = colors.fg1, back = colors.bg2}
+styles.fold_display_text = {fore = colors.bg2}
