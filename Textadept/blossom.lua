@@ -38,3 +38,22 @@ styles.line_number = {fore = colors.fg1, back = colors.bg2}
 styles.indent_guide = {fore = colors.comment}
 styles.call_tip = {fore = colors.fg1, back = colors.bg2}
 styles.fold_display_text = {fore = colors.bg2}
+
+-- Token styles.
+styles.class = {fore = colors.func, bold = true}
+styles.comment = {fore = colors.comment}
+styles.constant = {fore = colors.const}
+styles.embedded = {fore = colors.builtin, back = colors.bg2}
+styles.error = {fore = colors.warning, italics = true}
+styles['function'] = {fore = colors.func}
+styles.identifier = {fore=colors.var}
+styles.keyword = {fore = colors.keyword}
+styles.label = {fore = colors.warning}
+styles.number = {fore = colors.const}
+styles.operator = {fore = colors.fg2}
+styles.preprocessor = {fore = colors.str}
+styles.regex = {fore = colors.str}
+styles.string = {fore = colors.str}
+styles.type = {fore = colors.func}
+styles.variable = {fore = colors.warning}
+styles.whitespace = {}
