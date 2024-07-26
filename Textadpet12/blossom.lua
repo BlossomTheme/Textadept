@@ -82,3 +82,47 @@ styles[lexer.TYPE] =  {fore = colors.func}
 styles[lexer.VARIABLE] =  {fore = colors.warning}
 styles[lexer.VARIABLE_BUILTIN] =  {fore = colors.warning, bold=true}
 -- styles[lexer.WHITESPACE] =  {}
+
+-- CSS.
+-- styles.property = styles[lexer.ATTRIBUTE]
+-- styles.pseudoclass = {}
+-- styles.pseudoelement = {}
+-- Diff.
+styles.addition = {fore = colors.green}
+styles.deletion = {fore = colors.red}
+styles.change = {fore = colors.blue}
+-- HTML.
+styles.tag_unknown = styles.tag .. {italics = true}
+styles.attribute_unknown = styles.attribute .. {italics = true}
+-- Latex, TeX, and Texinfo.
+styles.command = styles[lexer.KEYWORD]
+styles.command_section = styles[lexer.HEADING]
+styles.environment = styles[lexer.TYPE]
+styles.environment_math = styles[lexer.NUMBER]
+-- Makefile.
+-- styles.target = {}
+-- Markdown.
+-- styles.hr = {}
+-- XML.
+-- styles.cdata = {}
+-- YAML.
+styles.error_indent = {back = colors.warning}
+
+-- Element colors.
+-- view.element_color[view.ELEMENT_SELECTION_TEXT] = colors.black
+view.element_color[view.ELEMENT_SELECTION_BACK] = colors.selection
+-- view.element_color[view.ELEMENT_SELECTION_ADDITIONAL_TEXT] = colors.black
+-- view.element_color[view.ELEMENT_SELECTION_ADDITIONAL_BACK] = colors.light_grey
+-- view.element_color[view.ELEMENT_SELECTION_SECONDARY_TEXT] = colors.black
+-- view.element_color[view.ELEMENT_SELECTION_SECONDARY_BACK] = colors.light_grey
+-- view.element_color[view.ELEMENT_SELECTION_INACTIVE_TEXT] = colors.black
+-- view.element_color[view.ELEMENT_SELECTION_INACTIVE_BACK] = colors.light_grey
+view.element_color[view.ELEMENT_CARET] = colors.fg2
+-- view.element_color[view.ELEMENT_CARET_ADDITIONAL] =
+-- view.element_color[view.ELEMENT_CARET_LINE_BACK] = colors.light_grey | 0x60000000
+view.caret_line_layer = view.LAYER_UNDER_TEXT
+
+-- Fold Margin.
+view:set_fold_margin_color(true, colors.bg2)
+view:set_fold_margin_hi_color(true, colors.bg2)
+
