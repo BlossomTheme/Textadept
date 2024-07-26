@@ -57,3 +57,17 @@ styles.string = {fore = colors.str}
 styles.type = {fore = colors.func}
 styles.variable = {fore = colors.warning}
 styles.whitespace = {}
+
+-- Multiple Selection and Virtual Space
+--view.additional_sel_alpha =
+--view.additional_sel_fore =
+--view.additional_sel_back =
+--view.additional_caret_fore =
+
+-- Caret and Selection Styles.
+view:set_sel_fore(true, colors.fg3)
+view:set_sel_back(true, colors.bg3)
+--view.sel_alpha =
+view.caret_fore = colors.fg2
+view.caret_line_back = colors.bg2
+--view.caret_line_back_alpha =
