@@ -71,3 +71,20 @@ view:set_sel_back(true, colors.bg3)
 view.caret_fore = colors.fg2
 view.caret_line_back = colors.bg2
 --view.caret_line_back_alpha =
+
+-- Fold Margin.
+view:set_fold_margin_color(true, colors.bg2)
+view:set_fold_margin_hi_color(true, colors.bg2)
+
+-- Markers.
+--view.marker_fore[textadept.bookmarks.MARK_BOOKMARK] = colors.bg1
+view.marker_back[textadept.bookmarks.MARK_BOOKMARK] = colors.str
+--view.marker_fore[textadept.run.MARK_WARNING] = colors.bg1
+view.marker_back[textadept.run.MARK_WARNING] = colors.keyword
+--view.marker_fore[textadept.run.MARK_ERROR] = colors.bg1
+view.marker_back[textadept.run.MARK_ERROR] = colors.warning
+for i = view.MARKNUM_FOLDEREND, view.MARKNUM_FOLDEROPEN do -- fold margin
+  view.marker_fore[i] = colors.bg1
+  view.marker_back[i] = colors.comment
+  view.marker_back_selected[i] = colors.bg3
+end
