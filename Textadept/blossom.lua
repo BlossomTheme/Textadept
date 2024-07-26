@@ -88,3 +88,22 @@ for i = view.MARKNUM_FOLDEREND, view.MARKNUM_FOLDEROPEN do -- fold margin
   view.marker_back[i] = colors.comment
   view.marker_back_selected[i] = colors.bg3
 end
+
+-- Indicators.
+view.indic_fore[ui.find.INDIC_FIND] = colors.const
+view.indic_alpha[ui.find.INDIC_FIND] = 255
+view.indic_fore[textadept.editing.INDIC_BRACEMATCH] = colors.fg3
+view.indic_fore[textadept.editing.INDIC_HIGHLIGHT] = colors.fg4
+view.indic_alpha[textadept.editing.INDIC_HIGHLIGHT] = 64
+view.indic_fore[textadept.snippets.INDIC_PLACEHOLDER] = colors.fg1
+
+-- Call tips.
+view.call_tip_fore_hlt = colors.fg3
+
+-- Long Lines.
+view.edge_color = colors.bg3
+
+-- Add red, green, and yellow for diff lexer.
+colors.red = colors.warning
+colors.green = colors.str
+colors.yellow = colors.keyword
